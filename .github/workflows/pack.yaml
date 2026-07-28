@@ -145,6 +145,7 @@ jobs:
             REF="${GITHUB_BASE_REF:-${GITHUB_REF}}"
             BRANCH="${REF#refs/heads/}"
             BRANCH="${BRANCH%-dev}"
+            BRANCH="${BRANCH//+/-}"
             CACHE_FROM_REF="xpustack/build-cache:xpustack-${BRANCH}"
             CACHE_TO_REF="${CACHE_FROM_REF}"
           fi
