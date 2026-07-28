@@ -300,7 +300,7 @@ ARG TARGETOS
 ARG TARGETARCH
 
 ## Configure data volume
-VOLUME /var/lib/gpustack
+VOLUME /var/lib/sgistack
 
 ## Install PostgreSQL
 
@@ -520,8 +520,9 @@ RUN --mount=type=cache,target=/root/.cache \
     tree -hs "$(pip show gpustack | grep Location: | head -n 1 | cut -d" " -f 2)/gpustack/third_party"
 
     # Set up environment
-    mkdir -p /var/lib/gpustack \
-        && chmod -R 0755 /var/lib/gpustack
+    mkdir -p /var/lib/sgistack \
+        && chmod -R 0755 /var/lib/sgistack \
+        && ln -s /var/lib/sgistack /var/lib/gpustack
 
     # Review
     uv pip tree \
