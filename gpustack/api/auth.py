@@ -33,7 +33,7 @@ from gpustack.server.services import APIKeyService, UserService
 
 logger = logging.getLogger(__name__)
 
-SESSION_COOKIE_NAME = "gpustack_session"
+SESSION_COOKIE_NAME = "sgistack_session"
 OIDC_ID_TOKEN_COOKIE_NAME = "gpustack_oidc_id_token"
 SSO_LOGIN_COOKIE_NAME = "gpustack_sso_login"
 SYSTEM_USER_PREFIX = "system/"

@@ -54,7 +54,7 @@ class PredefinedConfig(SensitivePredefinedConfig):
     benchmark_dir: Optional[str] = None
     system_default_container_registry: Optional[str] = None
     image_name_override: Optional[str] = None
-    image_repo: str = "gpustack/gpustack"
+    image_repo: str = "canstack/sgistack"
     benchmark_image_repo: str = (
         f"gpustack/benchmark-runner:{__benchmark_runner_version__}"
     )
@@ -62,7 +62,7 @@ class PredefinedConfig(SensitivePredefinedConfig):
     gateway_kubeconfig: Optional[str] = None
     gateway_namespace: str = "higress-system"
     service_discovery_name: Optional[str] = None
-    namespace: str = "gpustack-system"
+    namespace: str = "sgistack-system"
 
     # Worker options
     disable_worker_metrics: bool = False
